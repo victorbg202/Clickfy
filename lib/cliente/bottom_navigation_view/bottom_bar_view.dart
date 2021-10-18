@@ -3,7 +3,7 @@ import 'package:clickfy/fitness_app_theme.dart';
 import 'package:flutter/material.dart';
 
 import '../../main.dart';
-import '../models/tabicon_data.dart';
+import '../../models/tabicon_data.dart';
 
 class BottomBarView extends StatefulWidget {
   const BottomBarView(
@@ -57,7 +57,7 @@ class _BottomBarViewState extends State<BottomBarView>
                       height: 62,
                       child: Padding(
                         padding:
-                            const EdgeInsets.only(left: 8, right: 8, top: 4),
+                            const EdgeInsets.only(left: 4, right: 4, top: 4),
                         child: Row(
                           children: <Widget>[
                             Expanded(
@@ -67,32 +67,6 @@ class _BottomBarViewState extends State<BottomBarView>
                                     setRemoveAllSelection(
                                         widget.tabIconsList?[0]);
                                     widget.changeIndex!(0);
-                                  }),
-                            ),
-                            Expanded(
-                              child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[1],
-                                  removeAllSelect: () {
-                                    setRemoveAllSelection(
-                                        widget.tabIconsList?[1]);
-                                    widget.changeIndex!(1);
-                                  }),
-                            ),
-                            SizedBox(
-                              width: Tween<double>(begin: 0.0, end: 1.0)
-                                      .animate(CurvedAnimation(
-                                          parent: animationController!,
-                                          curve: Curves.fastOutSlowIn))
-                                      .value *
-                                  64.0,
-                            ),
-                            Expanded(
-                              child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[2],
-                                  removeAllSelect: () {
-                                    setRemoveAllSelection(
-                                        widget.tabIconsList?[2]);
-                                    widget.changeIndex!(2);
                                   }),
                             ),
                             Expanded(

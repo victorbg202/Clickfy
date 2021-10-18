@@ -1,9 +1,8 @@
-import 'package:clickfy/training/training_screen.dart';
 import 'package:flutter/material.dart';
-import 'bottom_navigation_view/bottom_bar_view.dart';
+import 'cliente/bottom_navigation_view/bottom_bar_view.dart';
 import 'fitness_app_theme.dart';
 import 'models/tabicon_data.dart';
-import 'my_diary/my_diary_screen.dart';
+import 'cliente/VPrincipal/v_principal.dart';
 
 class FitnessAppHomeScreen extends StatefulWidget {
   @override
@@ -29,7 +28,6 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
 
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
-    tabBody = MyDiaryScreen(animationController: animationController);
     super.initState();
   }
 
@@ -84,20 +82,14 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 if (!mounted) {
                   return;
                 }
-                setState(() {
-                  tabBody =
-                      MyDiaryScreen(animationController: animationController);
-                });
+                setState(() {});
               });
             } else if (index == 1 || index == 3) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
                   return;
                 }
-                setState(() {
-                  tabBody =
-                      TrainingScreen(animationController: animationController);
-                });
+                setState(() {});
               });
             }
           },
