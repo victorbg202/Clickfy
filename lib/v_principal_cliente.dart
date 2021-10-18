@@ -1,15 +1,14 @@
+import 'package:clickfy/models/tabicon_data.dart';
 import 'package:flutter/material.dart';
 import 'cliente/bottom_navigation_view/bottom_bar_view.dart';
-import 'fitness_app_theme.dart';
-import 'models/tabicon_data.dart';
-import 'cliente/VPrincipal/v_principal.dart';
+import 'app_theme.dart';
 
-class FitnessAppHomeScreen extends StatefulWidget {
+class NavigationHomeScreen extends StatefulWidget {
   @override
-  _FitnessAppHomeScreenState createState() => _FitnessAppHomeScreenState();
+  _NavigationHomeScreenState createState() => _NavigationHomeScreenState();
 }
 
-class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
+class _NavigationHomeScreenState extends State<NavigationHomeScreen>
     with TickerProviderStateMixin {
   AnimationController? animationController;
 

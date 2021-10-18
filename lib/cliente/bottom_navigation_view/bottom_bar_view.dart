@@ -1,5 +1,5 @@
 import 'dart:math' as math;
-import 'package:clickfy/fitness_app_theme.dart';
+import 'package:clickfy/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import '../../main.dart';
@@ -71,11 +71,11 @@ class _BottomBarViewState extends State<BottomBarView>
                             ),
                             Expanded(
                               child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[3],
+                                  tabIconData: widget.tabIconsList?[1],
                                   removeAllSelect: () {
                                     setRemoveAllSelection(
-                                        widget.tabIconsList?[3]);
-                                    widget.changeIndex!(3);
+                                        widget.tabIconsList?[1]);
+                                    widget.changeIndex!(1);
                                   }),
                             ),
                           ],

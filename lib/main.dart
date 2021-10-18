@@ -1,7 +1,5 @@
 import 'dart:io';
-
-import 'package:clickfy/app_theme.dart';
-import 'package:clickfy/navigation_home_screen.dart';
+import 'package:clickfy/v_principal_cliente.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,7 +30,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        textTheme: AppTheme.textTheme,
         platform: TargetPlatform.iOS,
       ),
       home: NavigationHomeScreen(),
