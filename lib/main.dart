@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:clickfy/v_principal_cliente.dart';
+import 'package:clickfy/cliente/VPrincipal/v_principal_cliente.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         platform: TargetPlatform.iOS,
       ),
-      home: NavigationHomeScreen(),
+      home: VPrincipalCliente(),
     );
   }
 }

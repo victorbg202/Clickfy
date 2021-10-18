@@ -1,20 +1,24 @@
+import 'package:clickfy/cliente/VBuscar/v_buscar_cliente.dart';
 import 'package:clickfy/models/tabicon_data.dart';
 import 'package:flutter/material.dart';
-import 'cliente/bottom_navigation_view/bottom_bar_view.dart';
-import 'app_theme.dart';
+import '../bottom_navigation_view/bottom_bar_view.dart';
+import '../../app_theme.dart';
 
-class NavigationHomeScreen extends StatefulWidget {
+class VPrincipalCliente extends StatefulWidget {
   @override
-  _NavigationHomeScreenState createState() => _NavigationHomeScreenState();
+  _VPrincipalClienteState createState() => _VPrincipalClienteState();
 }
 
-class _NavigationHomeScreenState extends State<NavigationHomeScreen>
+class _VPrincipalClienteState extends State<VPrincipalCliente>
     with TickerProviderStateMixin {
   AnimationController? animationController;
 
   List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
+  //Contenido de la pagina
   Widget tabBody = Container(
+    child:
+        Text('datoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'),
     color: FitnessAppTheme.background,
   );
 
@@ -76,19 +80,23 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen>
           tabIconsList: tabIconsList,
           addClick: () {},
           changeIndex: (int index) {
-            if (index == 0 || index == 2) {
+            if (index == 0) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
                   return;
                 }
-                setState(() {});
+                setState(() {
+                  tabBody = VPrincipalCliente();
+                });
               });
-            } else if (index == 1 || index == 3) {
+            } else if (index == 1) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
                   return;
                 }
-                setState(() {});
+                setState(() {
+                  tabBody = VBuscarCliente();
+                });
               });
             }
           },
